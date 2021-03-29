@@ -8,6 +8,7 @@ Make sure you install these modules in order to run the project
 pip install django
 pip install django-crispy-forms
 pip install requests
+pip install bs4
 ```
 
 ## Running the Server

@@ -1,0 +1,27 @@
+{% extends "news/base.html" %}
+
+{% block content %}
+
+{% load static %}
+<link type="text/css" href="{% static 'css/home.css' %}" rel="stylesheet">
+
+    {% for company in company_list %}
+        <h3 class="news-company">{{company}}</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for object in object_list %}
+                {% if object.company == company %}
+                    <div class="col">
+                        <div class="card">
+                            <img src="{{object.image}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a class="headline" href="{{object.link}}">{{object.headline}}</a>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endfor %}
+{% endblock %}

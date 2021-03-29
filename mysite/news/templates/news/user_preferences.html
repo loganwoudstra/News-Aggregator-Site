@@ -1,0 +1,26 @@
+{% extends "news/base.html" %}
+
+{% block title %}User Preferences{% endblock %}
+
+{% block content %}
+{% load static %}
+{% load customtags %}
+<link type="text/css" href="{% static 'css/user_preferences.css' %}" rel="stylesheet">
+<h1>User Preferences</h1>
+<p>Please select at least one of the following news outlets you would like to view articles from</p>
+    <form method="post" action="{% url 'user_preferences' %}">
+        {% csrf_token %}
+        {% for company in news_companies %}
+            <div class="form-check checkbox-lg">
+                {% if user_data|get_attr:company %}
+                    <input class="form-check-input larger" type="checkbox" value="{{company}}" id={{company}} name="companies" checked>
+                {% else %}
+                    <input class="form-check-input larger" type="checkbox" value="{{company}}" id={{company}} name="companies">
+                {% endif %}
+                <label class="text form-check-label" for={{company}}>{{company}}</label>
+            </div>
+        {% endfor %}
+      <button type="submit" class="btn btn-primary mb-2">Save</button>
+    </form>
+{% endblock %}
+

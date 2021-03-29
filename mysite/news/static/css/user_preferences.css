@@ -1,0 +1,20 @@
+h1{
+    font-size: 300%;
+}
+
+p{
+    font-size: 175%;
+}
+
+
+label{
+    margin-left: 4.5%;
+    font-size: 140%;
+    font-weight: 300;
+}
+
+input.larger {
+    margin-left: 2%;
+    width: 20px;
+    height: 20px;
+}

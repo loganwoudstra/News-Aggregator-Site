@@ -1,0 +1,43 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+#container{
+    position: relative;
+    min-height: 100vh;
+}
+
+header{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+main{
+    text-align: left;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    z-index: -1;
+}
+
+.main-title{
+    text-align: center;
+    font-size: 200%;
+    padding-left: 10px;
+}
+
+.favicon{
+    width: 60px;
+}
+
+.login-preferences{
+    font-size: 150%;
+}

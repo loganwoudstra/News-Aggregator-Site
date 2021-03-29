@@ -1,7 +1,7 @@
 # News-Aggregator-Web-App 
 A site where you can access all your favourite news outlets in one place
 
-## How to install this app on your computer
+## How to install this app on your computer 
 ### 1. Clone this repository
 Change the current working directory to the location where you want the cloned directory.
 ```terminal

@@ -8,7 +8,7 @@ Change the current working directory to the location where you want the cloned d
 $ git clone https://github.com/loganwoudstra/News-Aggregator-Web-App.git 
 ```
 
-### 2. Install the requirement.txt on your computer using pip
+### 2. Install requirement.txt
 
 ```python
 pip install -r requirements.txt
